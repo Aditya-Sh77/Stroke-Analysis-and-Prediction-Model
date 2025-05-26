@@ -73,8 +73,8 @@ if st.button("Predict Stroke Risk"):
 
     st.subheader("🔍 Prediction Result:")
     if result[0] == 1:
-        st.error(f"🔴 High Risk of Stroke (Confidence: {proba*100:.2f}%)")
+        st.error(f"🔴 High Risk of Stroke (Chances of Stroke: {proba*100:.2f}%)")
     else:
-        st.success(f"🟢 Low Risk of Stroke (Confidence: {proba*100:.2f}%)")
+        st.success(f"🟢 Low Risk of Stroke (Chances of Stroke: {proba*100:.2f}%)")
     
     st.markdown("Note: This is a machine learning prediction and should not replace professional medical advice.")
