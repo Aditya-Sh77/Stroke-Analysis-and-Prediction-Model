@@ -2,10 +2,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import joblib
-import pathlib
+import os
+
+
 
 # Load saved model and scaler
-model = joblib.load("./model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "model.pkl")
+model = joblib.load(model_path)
 
 # Page title
 st.set_page_config(page_title="Stroke Prediction App", layout="centered")
@@ -50,7 +53,9 @@ def preprocess(df):
     df_encoded = pd.get_dummies(df)
     
     # Reindex to match model's input
-    expected_cols = joblib.load("./model_columns.pkl")  # Save this during training
+    columns_path = os.path.join(os.path.dirname(__file__), "model_columns.pkl")
+
+    expected_cols = joblib.load(columns_path)  # Save this during training
     for col in expected_cols:
         if col not in df_encoded:
             df_encoded[col] = 0
