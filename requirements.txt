@@ -7,3 +7,5 @@ imbalanced-learn
 xgboost
 shap
 jupyter
+joblib
+streamlit
