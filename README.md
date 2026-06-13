@@ -2,6 +2,8 @@
 # 🧠 Stroke Prediction using Machine Learning
 
 This project uses a healthcare dataset to predict the likelihood of a stroke based on medical and demographic features.
+## Demo
+- https://stroke-pred-7.streamlit.app/
 
 ## 📊 Features
 - Cleaned and visualized real-world stroke data
@@ -26,7 +28,6 @@ This project uses a healthcare dataset to predict the likelihood of a stroke bas
 - `healthcare-dataset-stroke-data.csv`: Dataset (publicly available from [Kaggle](https://www.kaggle.com/datasets/fedesoriano/stroke-prediction-dataset))
 
 ## 🧠 Future Work
-- Deploy model using Streamlit
 - Add cross-validation and feature selection
 - Expand to time-series or live input predictions
 
